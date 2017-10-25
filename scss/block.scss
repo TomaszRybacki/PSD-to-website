@@ -1,0 +1,113 @@
+// Navigation
+body {
+    background-color: $pBg;
+}
+
+.nav {
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 20px 0;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+// Header
+.header {
+    width: 100%;
+    background-image: url(../img/banner_large.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 625px;
+}
+
+// Hello section
+.hello {
+    background-color: $pBg;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+
+    @include mobile {
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+}
+
+// Instagram section
+.instagram {
+    background-color: $sBg;
+    a {
+        color: inherit;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+}
+
+// Journal section
+.journal {
+    background-color: $pBg;
+    margin-bottom: 60px;
+
+    @include tablet {
+        margin-bottom: 20px;
+    }
+
+    @include mobile {
+        margin-bottom: 10px;
+    }
+}
+
+// About - me section
+.about {
+    background-color: $pBg;
+}
+
+.column {
+    flex: 0 0 48%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    @include tablet {
+        flex: 0 0 90%;
+    }
+
+    @include mobile {
+        flex: 0 0 80%;
+    }
+}
+
+// Footer section
+.footer {
+    margin-top: 60px;
+    background-color: $sBg;
+}
+
+.copy {
+    margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    @include tablet {
+        margin-top: 0;
+    }
+
+    @include mobile {
+        margin-top: 0;
+    }
+}

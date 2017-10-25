@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="author" content="Tomasz Rybacki">
+    <meta name="keywords" content="Kodowanie strony z projektu PSD">
+    <meta name="description" content="Wykonując ten projekt poznałem: Sass i metodologię BEM. Przećwiczyłem również tworzenie responsywnych stron z wykorzystaniem flexboxa i media query dla trzech rozdzielczości: pc, tablet i mobile.">
+
+    <title>KUBB Photography</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon96x96.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- FACEBOOK -->
+    <meta property="og:image" content="http://tomasz89.ayz.pl/img/preview.jpg"/>
+    <meta property="og:title" content="Kodowanie strony z projektu PSD"/>
+    <meta property="og:description" content="Wykonując ten projekt poznałem: Sass i metodologię BEM. Przećwiczyłem również tworzenie responsywnych stron z wykorzystaniem flexboxa i media query dla trzech rozdzielczości: pc, tablet i mobile." />
+    <meta property="og:url" content="http://tomasz89.ayz.pl"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pl_PL">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="wrapper">
+
+            <img class="nav__logo" src="img/logo.png" alt="logo">
+
+            <ol class="nav__menu animated">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#journal">Journal</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ol>
+
+            <ol class="nav__icons animated">
+                <li><a href="#"><img src="img/fbIcon.png" alt= "facebook icon"></a></li>
+                <li><a href="#"><img src="img/twIcon.png" alt= "twitter icon"></a></li>
+                <li><a href="#"><img src="img/beIcon.png" alt= "dribbble icon"></a></li>
+                <li><a href="#"><img src="img/piIcon.png" alt= "pinterest icon"></a></li>
+            </ol>
+
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header" id="home">
+        <div class="wrapper">
+
+            <div class="header__txt">
+                <h1 class="header__title">Jonathon kubb</h1>
+                <h2 class="header__subtitle">Photography</h2>
+                <p class="header__paragraph">Based in New York since 2001</p>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Hello section -->
+    <section class="hello" id="about">
+        <div class="wrapper">
+
+            <div class="hello__txt">
+                <p class="hello__title">Hello! I’m Jonathon Kubb, a freelance Photographer.</p>
+                <p class="hello__subtitle">Based in New York, I specialize in landscape, advertorial and conceptual photography.</p>
+                <h3 class="hello__chapter">&#9868;&#9868; What services do I offer &#9868;&#9868;</h3>
+            </div>
+
+            <div class="services">
+                <div class="services__box">
+                    <img src="img/service_1.jpg" alt="river">
+                    <p class="services__title">Landscape</p>
+                    <p class="services__paragraph">Curabitur blandit tempus porttitor. Duis mollis inceptos mollisest commodo luctus erat.</p>
+                </div>
+                <div class="services__box">
+                    <img src="img/service_2.jpg" alt="piano">
+                    <p class="services__title">Advertorial</p>
+                    <p class="services__paragraph">Maecenas faucibus mollis interdum. Morbi risus porta ac consectetur, vestibulum at eros.</p>
+                </div>
+                <div class="services__box">
+                    <img src="img/service_3.jpg" alt="leafs">
+                    <p class="services__title">Conceptual</p>
+                    <p class="services__paragraph">Donec elit non porta gravida eget metus. Etiam porta sem malesuada magna mollis euismod.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Instagram section -->
+    <section class="instagram" id="portfolio">
+        <div class="wrapper">
+
+            <div class="instagram__top">
+                <h3 class="instagram__chapter">&#9868;&#9868; Latest ınstagram shots &#9868;&#9868;</h3>
+            </div>
+            <div class="instagram__mid">
+                <div class="instagram__box"><img src="img/shot_1.jpg" alt="bicycle"></div>
+                <div class="instagram__box"><img src="img/shot_2.jpg" alt="clips"></div>
+                <div class="instagram__box"><img src="img/shot_3.jpg" alt="car"></div>
+                <div class="instagram__box"><img src="img/shot_4.jpg" alt="wires"></div>
+            </div>
+            <div class="instagram__bottom">
+                <a href="#">
+                    <p class="instagram__button"><img src="img/inIcon.png" alt="icon">Instagram Page</p>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Journal section -->
+    <section class="journal" id="journal">
+        <div class="wrapper">
+
+            <div class="journal__top">
+                <h3 class="journal__chapter">&#9868;&#9868; From the Journal &#9868;&#9868;</h3>
+            </div>
+            <div class="journal__bottom">
+                <div class="journal__box">
+                    <p class="journal__title">Pellentesque Malesuada Vulputate</p>
+                    <p class="journal__subtitle">21.04.2014 / Photography, Journal</p>
+                    <img src="img/blog_1.jpg" alt="mushrooms">
+                    <p class="journal__paragraph">Curabitur blandit tempus porttitor. Duis at vollisky inceptos mollisestor commodo luctus erat. Morbi risus, porta consectetur vestibulum at eros.</p>
+                    <p class="journal__link"><a href="#">Continue Reading</a></p>
+                </div>
+                <div class="journal__box">
+                    <p class="journal__title">Malesuada Portar Etiam Ligula</p>
+                    <p class="journal__subtitle">21.04.2014 / Photography, Journal</p>
+                    <img src="img/blog_2.jpg" alt="coffe">
+                    <p class="journal__paragraph">Curabitur blandit tempus porttitor. Duis at vollisky inceptos mollisestor commodo luctus erat. Morbi risus, porta consectetur vestibulum at eros.</p>
+                    <p class="journal__link"><a href="#">Continue Reading</a></p>
+                </div>
+                <div class="journal__box">
+                    <p class="journal__title">Purus Justo Consectetur Ipsum</p>
+                    <p class="journal__subtitle">21.04.2014 / Photography, Journal</p>
+                    <img src="img/blog_3.jpg" alt="restaurant">
+                    <p class="journal__paragraph">Curabitur blandit tempus porttitor. Duis at vollisky inceptos mollisestor commodo luctus erat. Morbi risus, porta consectetur vestibulum at eros.</p>
+                    <p class="journal__link"><a href="#">Continue Reading</a></p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- About me section -->
+    <section class="about" id="services">
+        <div class="wrapper">
+
+            <div class="column">
+                <h3 class="about__chapter">A little about me &#9868;&#9868;</h3>
+                <div class="photo">
+                    <img src="img/About%20me.jpg" alt="Photo of me">
+                </div>
+                <div class="txt">
+                    <p class="about__intro">Maecenas faucibus molli interdum. Cras mattis consectetur purus sitor amet sed donec malesuada ullamcorper odio.</p>
+                    <p class="about__paragraph">Curabitur blandit tempus porttitor. Vollisky inceptos mollisestor commodo luctus. Curabitur blandit tempus porttitor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id ligulas semper. Cum sociis natoque penatibus et magnis maecenas. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac egestas eget quam.</p>
+                </div>
+            </div>
+            <div class="column">
+                <h3 class="about__chapter">My Services &#9868;&#9868;</h3>
+                <ul>
+                    <li class="about-me__column__title service__icon1">Photography</li>
+                    <li class="about-me__column__paragraph">Curabitur blandit tempus porttitor. Duis at vollisky inceptos mollisestor commodo luctus erat. Morbi risus, porta consectetur vestibulum at eros.</li>
+                    <li class="about-me__column__title service__icon2">Motion Video</li>
+                    <li class="about-me__column__paragraph">Curabitur blandit tempus porttitor. Duis at vollisky inceptos mollisestor commodo luctus erat. Morbi risus, porta consectetur vestibulum at eros.</li>
+                    <li class="about-me__column__title service__icon3">Photo Retouching</li>
+                    <li class="about-me__column__paragraph">Curabitur blandit tempus porttitor. Duis at vollisky inceptos mollisestor commodo luctus erat. Morbi risus, porta consectetur vestibulum at eros.</li>
+                </ul>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- Footer section -->
+    <footer class="footer" id="contact">
+        <div class="wrapper">
+
+            <div class="footer__all">
+
+                <div class="footer__box">
+                    <p class="footer__title">Get In Touch</p>
+                    <p class="footer__paragraph">Fusce dapibus, tellus commodo, tortor mauris condimentum utellus fermentum, porta sem malesuada magna.</p>
+                    <ul class="footer__addres">
+                       <li class="footer__txt footer__icon1">Moonshine Street No: 14/05</li>
+                       <li class="footer__txt footer__icon2">Light City, Jupiter</li>
+                       <li class="footer__txt footer__icon3">0247 541 65 87</li>
+                       <li class="footer__txt footer__icon4">support@wave.com</li>
+                    </ul>
+                </div>
+                <div class="footer__box">
+                    <p class="footer__title">Twitter</p>
+                    <p class="footer__paragraph">Aenean lacinia bibendum nulla sed leo posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+                    <p class="footer__paragraph">Donec ullamcorper metus auctor fringilla. Nullam quis risus eget.</p>
+                    <p class="footer__paragraph">Vestibulum id ligula porta euismod semper. Maecenas faucibus mollis. </p>
+
+                </div>
+                <div class="footer__box">
+                    <p class="footer__title">Popular Posts</p>
+                    <p class="footer__paragraph">Vivamus sagittis lacus vel augue laoreet rutrum dolor auctor.</p>
+                    <p class="footer__date">14 Nov, 2012</p>
+                    <p class="footer__paragraph">Scelerisque nisl consectetur et.</p>
+                    <p class="footer__date">22 May, 2012</p>
+                    <p class="footer__paragraph">Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce</p>
+                    <p class="footer__date">15 July, 2012</p>
+
+                </div>
+                <div class="footer__box">
+                    <p class="footer__title">About Us</p>
+                    <p class="footer__paragraph">Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+                    <p class="footer__paragraph">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus curabitur blandit tempus.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="copy">
+            <div class="wrapper">
+               <div class="footer__copy">
+                <p class="footer__paragraph">© 2017 Kubb. All rights reserved. Theme by elemis. Coded by Tomasz Rybacki.</p>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+    <script src="scripts/jquery-3.2.0.min.js"></script>
+    <script src="scripts/code.js"></script>
+</body>
+
+</html>
