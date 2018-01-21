@@ -1,65 +1,69 @@
-/*jslint es6 */
-
 // Display menu
 
-const logoElem = $(".nav__logo");
-const menuElem = $(".nav__menu");
-const iconElem = $(".nav__icons");
+const logoElem = document.getElementsByClassName('nav__logo');
+const menuElem = document.getElementsByClassName('nav__menu');
+const iconElem = document.getElementsByClassName('nav__icons');
 
-logoElem.click(function () {
-    "use strict";
-    if (menuElem.hasClass("slideInDown")) {
+logoElem[0].addEventListener('click', function () {
+    if (menuElem[0].classList.contains('slideInDown')) {
 
-        menuElem.css("display", "none");
-        iconElem.css("display", "none");
+        menuElem[0].style.display = 'none';
+        iconElem[0].style.display = 'none';
 
-        menuElem.toggleClass("slideInDown");
-        iconElem.toggleClass("slideInDown");
+        menuElem[0].classList.toggle('slideInDown');
+        iconElem[0].classList.toggle('slideInDown');
 
     } else {
-        menuElem.css("display", "flex");
-        iconElem.css("display", "flex");
+        menuElem[0].style.display = 'flex';
+        iconElem[0].style.display = 'flex';
 
-        menuElem.toggleClass("slideInDown");
-        iconElem.toggleClass("slideInDown");
+        menuElem[0].classList.toggle('slideInDown');
+        iconElem[0].classList.toggle('slideInDown');
     }
 });
 
+// Scroll
 
-// Smooth scrolling
+let linksElements = document.getElementsByTagName('a');
+let RegExpression = /#$/;
 
-    // Select all links with hashes
-    $('a[href*="#"]')
-        // Remove links that don't actually link to anything
-        .not('[href="#"]')
-        .not('[href="#0"]')
-        .click(function (event) {
-            // On-page links
-            if (
-                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
-                location.hostname == this.hostname
-            ) {
-                // Figure out element to scroll to
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                // Does a scroll target exist?
-                if (target.length) {
-                    // Only prevent default if animation is actually gonna happen
-                    event.preventDefault();
-                    $('html, body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000, function () {
-                        // Callback after animation
-                        // Must change focus!
-                        var $target = $(target);
-                        $target.focus();
-                        if ($target.is(":focus")) { // Checking if the target was focused
-                            return false;
-                        } else {
-                            $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-                            $target.focus(); // Set focus again
-                        };
-                    });
-                }
-            }
-        });
+let linksArray = Array.from(linksElements).filter(function(a) {
+  return !RegExpression.test(a.href);
+});
+
+let linksHref = linksArray.map(function(a) {
+  return a.href;
+});
+
+document.addEventListener('click', function (e) {
+  if (e.target.tagName === 'A') {
+    let scrollTo = e.target.href;
+    let index = scrollTo.search(/#/);
+    let id = scrollTo.slice(index + 1);
+    let targetElem = document.getElementById(id);
+
+    if (linksHref.includes(scrollTo)) {
+      e.preventDefault();
+      let targetPosition = targetElem.offsetTop;
+      let timer = setInterval(frame, 20);
+      let currentPosition = window.pageYOffset;
+      let timeForScrolling = Math.abs(targetPosition - currentPosition);
+
+      setTimeout(function () {
+        clearInterval(timer);
+      }, timeForScrolling);
+
+      function frame() {
+        if (window.pageYOffset >= targetPosition) {
+          currentPosition -= 20;
+          window.scroll(0, currentPosition);
+        }
+
+        if (window.pageYOffset < targetPosition) {
+          currentPosition += 20;
+          window.scroll(0, currentPosition);
+        }
+      }
+    }
+  }
+});
